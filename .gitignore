@@ -50,6 +50,9 @@ Carthage/Checkouts
 
 Carthage/Build
 
+ReactiveCocoa.framework
+Result.framework
+
 # fastlane
 #
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
