@@ -26,8 +26,8 @@ class ViewController: NSViewController {
         let uiScheduler = UIScheduler()
         funViewModel.signal.observeOn(uiScheduler).observe { event in
             switch event {
-            case let .Next(text):
-                self.manSignalFired(text)
+            case let .Next(num):
+                self.manSignalFired(num)
             case .Completed:
                 self.completed = true
             case .Failed:
