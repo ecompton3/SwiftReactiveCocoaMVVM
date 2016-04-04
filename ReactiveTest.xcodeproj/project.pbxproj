@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8162B6EC1CB2C4DF00F1F39E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8162B6EB1CB2C4DF00F1F39E /* ViewModel.swift */; };
+		8162B6EE1CB2C4EE00F1F39E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8162B6ED1CB2C4EE00F1F39E /* Model.swift */; };
 		81B1C0671CAD6BFD00CB2AD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1C0661CAD6BFD00CB2AD8 /* AppDelegate.swift */; };
 		81B1C0691CAD6BFD00CB2AD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1C0681CAD6BFD00CB2AD8 /* ViewController.swift */; };
 		81B1C06B1CAD6BFD00CB2AD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81B1C06A1CAD6BFD00CB2AD8 /* Assets.xcassets */; };
 		81B1C06E1CAD6BFD00CB2AD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B1C06C1CAD6BFD00CB2AD8 /* Main.storyboard */; };
 		81B1C0791CAD6BFD00CB2AD8 /* ReactiveTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1C0781CAD6BFD00CB2AD8 /* ReactiveTestTests.swift */; };
+		81B1C0861CAD6E1500CB2AD8 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B1C0851CAD6E1500CB2AD8 /* ReactiveCocoa.framework */; };
+		81B1C0881CAD6E1C00CB2AD8 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B1C0871CAD6E1C00CB2AD8 /* Result.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8162B6EB1CB2C4DF00F1F39E /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		8162B6ED1CB2C4EE00F1F39E /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		81B1C0631CAD6BFD00CB2AD8 /* ReactiveTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B1C0661CAD6BFD00CB2AD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81B1C0681CAD6BFD00CB2AD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +40,8 @@
 		81B1C0741CAD6BFD00CB2AD8 /* ReactiveTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B1C0781CAD6BFD00CB2AD8 /* ReactiveTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveTestTests.swift; sourceTree = "<group>"; };
 		81B1C07A1CAD6BFD00CB2AD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81B1C0851CAD6E1500CB2AD8 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveCocoa.framework; sourceTree = "<group>"; };
+		81B1C0871CAD6E1C00CB2AD8 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81B1C0861CAD6E1500CB2AD8 /* ReactiveCocoa.framework in Frameworks */,
+				81B1C0881CAD6E1C00CB2AD8 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,11 +85,14 @@
 		81B1C0651CAD6BFD00CB2AD8 /* ReactiveTest */ = {
 			isa = PBXGroup;
 			children = (
+				81B1C0841CAD6DEF00CB2AD8 /* frameworks */,
 				81B1C0661CAD6BFD00CB2AD8 /* AppDelegate.swift */,
 				81B1C0681CAD6BFD00CB2AD8 /* ViewController.swift */,
 				81B1C06A1CAD6BFD00CB2AD8 /* Assets.xcassets */,
 				81B1C06C1CAD6BFD00CB2AD8 /* Main.storyboard */,
 				81B1C06F1CAD6BFD00CB2AD8 /* Info.plist */,
+				8162B6EB1CB2C4DF00F1F39E /* ViewModel.swift */,
+				8162B6ED1CB2C4EE00F1F39E /* Model.swift */,
 			);
 			path = ReactiveTest;
 			sourceTree = "<group>";
@@ -93,6 +106,15 @@
 			path = ReactiveTestTests;
 			sourceTree = "<group>";
 		};
+		81B1C0841CAD6DEF00CB2AD8 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81B1C0871CAD6E1C00CB2AD8 /* Result.framework */,
+				81B1C0851CAD6E1500CB2AD8 /* ReactiveCocoa.framework */,
+			);
+			name = frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,6 +125,7 @@
 				81B1C05F1CAD6BFD00CB2AD8 /* Sources */,
 				81B1C0601CAD6BFD00CB2AD8 /* Frameworks */,
 				81B1C0611CAD6BFD00CB2AD8 /* Resources */,
+				81B1C0831CAD6C8D00CB2AD8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -188,13 +211,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		81B1C0831CAD6C8D00CB2AD8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/Result.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/ReactiveCocoa.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		81B1C05F1CAD6BFD00CB2AD8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				81B1C0691CAD6BFD00CB2AD8 /* ViewController.swift in Sources */,
+				8162B6EC1CB2C4DF00F1F39E /* ViewModel.swift in Sources */,
 				81B1C0671CAD6BFD00CB2AD8 /* AppDelegate.swift in Sources */,
+				8162B6EE1CB2C4EE00F1F39E /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +358,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ReactiveTest",
+				);
 				INFOPLIST_FILE = ReactiveTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.cio.be.ReactiveTest;
@@ -327,6 +374,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ReactiveTest",
+				);
 				INFOPLIST_FILE = ReactiveTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.cio.be.ReactiveTest;
@@ -379,6 +430,7 @@
 				81B1C07F1CAD6BFD00CB2AD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81B1C0801CAD6BFD00CB2AD8 /* Build configuration list for PBXNativeTarget "ReactiveTestTests" */ = {
 			isa = XCConfigurationList;
@@ -387,6 +439,7 @@
 				81B1C0821CAD6BFD00CB2AD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

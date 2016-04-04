@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6198" systemVersion="14A297b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6198"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -641,12 +642,12 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="ReactiveTest" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Window Controller - Window-->
+        <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
@@ -667,11 +668,73 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="ReactiveTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ngf-qy-FOg">
+                                <rect key="frame" x="188" y="195" width="84" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Action Signal" id="uaZ-h1-ah7">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MxN-mL-BeM">
+                                <rect key="frame" x="179" y="91" width="123" height="32"/>
+                                <buttonCell key="cell" type="push" title="Action Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7YD-rs-EYm">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bUj-Q8-Srv">
+                                <rect key="frame" x="177" y="58" width="128" height="32"/>
+                                <buttonCell key="cell" type="push" title="Manual Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="shV-ak-SuL">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="manBtnPressed:" target="XfG-lQ-9wD" id="rWW-Sl-ca8"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ev2-JL-Q6z">
+                                <rect key="frame" x="188" y="170" width="89" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Manual Signal" id="Nvx-kl-5h9">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7GZ-Qz-z78">
+                                <rect key="frame" x="188" y="145" width="67" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Poll Signal" id="T5H-R4-C6R">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Ngf-qy-FOg" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="13b-Ed-77a"/>
+                            <constraint firstItem="bUj-Q8-Srv" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="7w6-3r-FHf"/>
+                            <constraint firstItem="Ev2-JL-Q6z" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="8Zu-ZC-RXC"/>
+                            <constraint firstItem="Ngf-qy-FOg" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="58" id="N3d-mk-hI8"/>
+                            <constraint firstItem="Ev2-JL-Q6z" firstAttribute="top" secondItem="Ngf-qy-FOg" secondAttribute="bottom" constant="8" id="THa-Q3-2My"/>
+                            <constraint firstItem="7GZ-Qz-z78" firstAttribute="top" secondItem="Ev2-JL-Q6z" secondAttribute="bottom" constant="8" id="jOW-EN-jXK"/>
+                            <constraint firstItem="bUj-Q8-Srv" firstAttribute="top" secondItem="MxN-mL-BeM" secondAttribute="bottom" constant="12" id="kn0-Aq-ZWo"/>
+                            <constraint firstItem="7GZ-Qz-z78" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="n95-6S-11u"/>
+                            <constraint firstItem="MxN-mL-BeM" firstAttribute="top" secondItem="7GZ-Qz-z78" secondAttribute="bottom" constant="26" id="oAo-PS-3dJ"/>
+                            <constraint firstItem="MxN-mL-BeM" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="zPq-Wm-R6U"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="MxN-mL-BeM" id="kEl-kc-unB"/>
+                        <outlet property="label" destination="Ngf-qy-FOg" id="i5I-QP-X4P"/>
+                        <outlet property="manualButton" destination="bUj-Q8-Srv" id="GgV-ev-LfH"/>
+                        <outlet property="manualLabel" destination="Ev2-JL-Q6z" id="JK9-d0-bf1"/>
+                        <outlet property="pollLabel" destination="7GZ-Qz-z78" id="0eI-Ym-L6r"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
